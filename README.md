@@ -1,4 +1,4 @@
-# AvifImgHub- 图片上传与压缩工具
+# AvifImgHub - 图片上传与压缩工具
 
 公众号：泷羽Sec
 
@@ -6,31 +6,35 @@
 
 微信：baibaixiaoyu2024
 
-一个基于Flask的图片上传与压缩工具，集成Typora自定义命令上传，可将图片压缩为AVIF格式并保存。
+AvifImgHub是一个基于Flask的图片上传与压缩工具，集成Typora自定义命令上传，可将图片压缩为AVIF格式并保存。
 
 从下图可以明显的看到图片的压缩情况，压缩后的图片文件大小为17.4KB，压缩前的文件大小为485.08KB，缩小了二十倍多！并且集成了Typora上传图片的功能，不需要高价使用腾讯云/阿里云的对象存储，节省成本
 
-![0e2ab53d20260113121330781](http://154.64.250.117:5000/myImg/1ab3dc5b20260113044623683.png?avif)
+![0e2ab53d20260113121330781](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130249420.avif?imageMogr2/format/avif)
 
-就拿我的对象存储来讲，由于我的站longyusec.com复现过程比较多，图片也是非常的多，我每次请求访问一次网站就要消耗不少次数了，更何况一天几百人访问，下面是我买的图片压缩包，要不是年底腾讯云活动打折，不然一年的成本就要500-1000块
+就拿我的对象存储来讲，**由于我的站longyusec.com复现过程比较多，图片也是非常的多**，我每次请求访问一次网站就要消耗不少次数了，更何况一天几百人访问，下面是我买的图片压缩包，要不是年底腾讯云活动打折，不然一年的成本就要500-1000块
 
-![image-20260113124300171](http://154.64.250.117:5000/myImg/9a2ebb0120260113044301420.png?avif)
+![image-20260113124300171](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130253633.avif?imageMogr2/format/avif)
+
+这才半年不到，就用了66%了。。。。。。。
+
+![image-20260113125915910](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130257398.avif?imageMogr2/format/avif)
 
 另外还有流量包，请求次数包，等等
 
 ![image-20260113124511930](http://154.64.250.117:5000/myImg/9e71bf6720260113044512869.png?avif)
 
-为此我想到了一个方法，我的服务器是无限流量的，空间也相对来说足够
+为此我想到了一个方法，**我的服务器是无限流量的，空间也相对来说足够**
 
 11
 
 那么有没有什么方法呢，我之前一直使用的是腾讯云的对象存储，还想要把它放在服务器上？并压缩？
 
-![image-20260113122813841](http://154.64.250.117:5000/myImg/82a87ffd20260113042814383.png?avif)
+![image-20260113122813841](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130301388.avif?imageMogr2/format/avif)
 
 然后还能告别PicGo！使用自定义服务器，还能配合粘贴，并上传到云端中
 
-![image-20260113123705549](http://154.64.250.117:5000/myImg/450316ae20260113043706110.png?avif)
+![image-20260113123705549](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130304292.avif?imageMogr2/format/avif)
 
 这个时候，AvifImgHub 诞生了
 
@@ -99,7 +103,7 @@ pip install -r requirements.txt
 
 若出现如下错误
 
-![image-20260113112157621](http://154.64.250.117:5000/myImg/7f37e48520260113044456265.png?avif)
+![image-20260113112157621](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130308740.avif?imageMogr2/format/avif)
 
 需要在后边添加一个参数即可
 
@@ -107,11 +111,11 @@ pip install -r requirements.txt
 pip install -r requirements.txt --break-system-packages
 ```
 
-![image-20260113111905365](http://154.64.250.117:5000/myImg/025bb24d20260113044453488.png?avif)
+![image-20260113111905365](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130316291.avif?imageMogr2/format/avif)
 
 客户端
 
-![image-20260113112251633](http://154.64.250.117:5000/myImg/a27d2b7220260113044452092.png?avif)
+![image-20260113112251633](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130319917.avif?imageMogr2/format/avif)
 
 ## 配置说明
 
@@ -147,7 +151,7 @@ python app.py
 
 服务将在 `http://127.0.0.1:5000` 启动
 
-![image-20260113112428600](http://154.64.250.117:5000/myImg/8c02106c20260113044449224.png?avif)
+![image-20260113112428600](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130323486.avif?imageMogr2/format/avif)
 
 支持以下API端点：
 
@@ -160,27 +164,27 @@ python app.py
 
 1、运行 `get_typora_cmd.exe`
 
-![image-20260113112528961](http://154.64.250.117:5000/myImg/4d4df22d20260113044446275.png?avif)
+![image-20260113112528961](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130326499.avif?imageMogr2/format/avif)
 
 2、点击"复制命令"
 
-![image-20260113112622881](http://154.64.250.117:5000/myImg/5443b59820260113044444286.png?avif)
+![image-20260113112622881](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130330087.avif?imageMogr2/format/avif)
 
 3、打开Typora偏好设置 → 图像 → 上传服务设定 → 自定义命令
 
-![image-20260113115849803](http://154.64.250.117:5000/myImg/34e11ddb20260113035850455.png?avif)
+![image-20260113115849803](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130335012.avif?imageMogr2/format/avif)
 
 4、粘贴命令并点击"验证图片上传选项"
 
-![image-20260113113949786](http://154.64.250.117:5000/myImg/20260113033950.png?avif)
+![image-20260113113949786](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130338232.avif?imageMogr2/format/avif)
 
 验证成功！
 
-![image-20260113115739342](http://154.64.250.117:5000/myImg/28d97f2920260113035739939.png?avif)
+![image-20260113115739342](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130341431.avif?imageMogr2/format/avif)
 
 5、尝试拖动/截图/粘贴到typora，也是成功上传到云服务器中
 
-![image-20260113120314662](http://154.64.250.117:5000/myImg/ddf345d120260113040315492.png?avif)
+![image-20260113120314662](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130344831.avif?imageMogr2/format/avif)
 
 #### 方法2：手动配置
 
@@ -202,7 +206,7 @@ python upload_all.py
 
 准备好一个图片
 
-![image-20260113113242645](http://154.64.250.117:5000/myImg/7e7e947c20260113044436845.png?avif)
+![image-20260113113242645](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130347947.avif?imageMogr2/format/avif)
 
 上传一张图片
 
@@ -210,7 +214,7 @@ python upload_all.py
 python typora_upload.py .\test_image.png
 ```
 
-![image-20260113113450506](http://154.64.250.117:5000/myImg/b562756220260113044433473.png?avif)
+![image-20260113113450506](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130351120.avif?imageMogr2/format/avif)
 
 上传多张图片
 
@@ -218,7 +222,7 @@ python typora_upload.py .\test_image.png
 python typora_upload.py .\test_image.png .\test_image.png 
 ```
 
-![image-20260113113627335](http://154.64.250.117:5000/myImg/2408d37e20260113044431525.png?avif)
+![image-20260113113627335](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130353622.avif?imageMogr2/format/avif)
 
 ## 安全特性
 
@@ -250,7 +254,7 @@ pip install gunicorn
 gunicorn -w 4 -b 0.0.0.0:5000 app:app &
 ```
 
-![image-20260113120757260](http://154.64.250.117:5000/myImg/24d9947920260113040757866.png?avif)
+![image-20260113120757260](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130357021.avif?imageMogr2/format/avif)
 
 这样之后即使你的会话断开了，也不会导致你的服务停止
 
@@ -260,7 +264,7 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app &
 
 确保 `typora_upload.py` 中的 `API_TOKEN` 与 `app.py` 中的 `API_TOKEN` 一致。
 
-![image-20260113120928389](http://154.64.250.117:5000/myImg/510ab49e20260113040928951.png?avif)
+![image-20260113120928389](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130359350.avif?imageMogr2/format/avif)
 
 ### 2. 上传失败，提示"File type not allowed"
 
@@ -289,9 +293,10 @@ result = compress_image_to_avif(temp_input, avif_path, quality=40)  # 调整qual
 
 默认是40，可以参考如下图，压缩后的图片大小为17.4KB，而压缩前是485.08KB，在图片整体观感中是看不出任何变化的！！！
 
-![0e2ab53d20260113121330781](http://154.64.250.117:5000/myImg/1ab3dc5b20260113044623683.png?avif)
+![0e2ab53d20260113121330781](https://md-1312988675.cos.ap-nanjing.myqcloud.com/myImg/20260113130402367.avif?imageMogr2/format/avif)
 
 ## 许可证
 
 MIT License
+
 
